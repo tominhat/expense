@@ -1,0 +1,284 @@
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(13, 110, 253, 0.14), transparent 32%),
+    #f5f6fa;
+}
+
+.login-page {
+  min-height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-shell {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.login-brand {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #111827;
+}
+
+.login-subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.login-panel {
+  padding: 24px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+}
+
+.login-username {
+  margin-top: 2px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  overflow-wrap: anywhere;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-control {
+  height: 52px;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.btn-login {
+  height: 52px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 22px;
+}
+/* Giao diện nền tổng thể mượt mà giống iOS */
+body.pin-active {
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+    radial-gradient(circle at 22% 18%, rgba(141, 211, 199, 0.42), transparent 28%),
+    radial-gradient(circle at 18% 72%, rgba(244, 162, 97, 0.26), transparent 30%),
+    radial-gradient(circle at 84% 38%, rgba(67, 97, 238, 0.42), transparent 32%),
+    linear-gradient(145deg, #164e63 0%, #1e3a8a 42%, #111827 100%);
+  /* background:
+    radial-gradient(circle at top left, rgba(13, 110, 253, 0.14), transparent 32%),
+    #354ca6; */
+
+}
+
+body.pin-active .login-page {
+  min-height: 100dvh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.pin-active .login-header {
+  display: none;
+}
+
+.pin-screen {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  /* color: #fff; */
+    color: #1f2937;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Biểu tượng ổ khóa nhỏ gọn */
+.pin-lock {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.pin-hello {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: -0.2px;
+}
+
+/* Tiêu đề "Nhập mật mã" thanh thoát */
+.pin-title {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-bottom: 28px;
+}
+
+/* Chấm tròn PIN mỏng, tinh tế */
+.pin-dots {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 64px;
+}
+
+.pin-dots span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.pin-dots span.active {
+  background: #fff;
+  border-color: #fff;
+}
+
+/* Bàn phím số Grid chuẩn tỉ lệ */
+.number-keypad {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 82px);
+  justify-content: center;
+  gap: 20px 32px;
+}
+
+/* Phím tròn iOS với hiệu ứng Blur nhẹ */
+.pin-key {
+  width: 82px;
+  height: 82px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s ease;
+  cursor: pointer;
+}
+
+/* Hiệu ứng khi nhấn giữ phím */
+.pin-key:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.pin-number {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.pin-letters {
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CSS cho 2 nút chữ (Đổi user / Xóa) ở hàng dưới cùng */
+.pin-text-btn {
+  width: 82px;
+  height: 82px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.pin-text-btn:active {
+  opacity: 0.5;
+}
+
+/* Tối ưu hóa responsive cho các dòng máy màn hình nhỏ */
+@media (max-width: 380px) {
+  .number-keypad {
+    grid-template-columns: repeat(3, 74px);
+    gap: 16px 24px;
+  }
+
+  .pin-key, .pin-text-btn {
+    width: 74px;
+    height: 74px;
+  }
+
+  .pin-number {
+    font-size: 34px;
+  }
+  
+  .pin-dots {
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+}
+
+/* fix zoom when double click on ios */
+html {
+  touch-action: manipulation;
+}
+
+button,
+.pin-key,
+.pin-text-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* end */
+
+
+.pin-login-btn {
+  width: 100%;
+  max-width: 260px;
+  height: 48px;
+  margin-top: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #12305f;
+  font-size: 17px;
+  font-weight: 700;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pin-login-btn:disabled {
+  opacity: 0.35;
+}
+
+.pin-login-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}

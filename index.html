@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Expense App</title>
+
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <script>
+        const isLoggedIn =
+            localStorage.getItem("isLoggedIn");
+
+        if (isLoggedIn === "true") {
+            window.location.href = "./html/home.html";
+        } else {
+            window.location.href = "./html/login.html";
+        }
+    </script>
+
+  <div class="container py-4">
+    <h2 class="mb-4">Expense Management</h2>
+
+    <div class="card mb-4">
+      <div class="card-header">
+        Add Expense
+      </div>
+
+      <div class="card-body">
+        <form id="expenseForm">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Expense Name</label>
+              <input type="text" id="expenseName" class="form-control" required />
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Amount</label>
+              <input type="number" id="amount" class="form-control" min="1" required />
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Paid By</label>
+              <input type="text" id="paidBy" class="form-control" required />
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+              <button type="submit" class="btn btn-primary w-100">
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <span>Expense List</span>
+        <button class="btn btn-sm btn-outline-secondary" onclick="loadExpenses()">
+          Reload
+        </button>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Expense</th>
+              <th>Amount</th>
+              <th>Paid By</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody id="expenseTableBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Login</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap-icons-1.13.1/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="login-shell">
+
+      <div class="login-header">
+        <div class="login-brand">Expense</div>
+        <div class="login-subtitle">Track shared spending</div>
+      </div>
+
+      <div id="usernameScreen" class="login-panel">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="Enter username"
+            autocomplete="username"
+            required
+          />
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary w-100 btn-login"
+          onclick="goPasswordScreen()"
+          aria-label="Continue"
+        >
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+
+      <div id="passwordScreen" class="pin-screen d-none">
+        <!-- <div class="pin-lock">
+          <i class="bi bi-lock-fill"></i> 
+        </div> -->
+
+        <div class="pin-hello">
+          Xin chào, <span id="helloUsername"></span>
+        </div>
+
+        <div class="pin-dots" id="pinDots">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="number-keypad">
+          <button type="button" class="pin-key" onclick="pressPin('1')">
+            <span class="pin-number">1</span>
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('2')">
+            <span class="pin-number">2</span>
+            <!-- <span class="pin-letters">A B C</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('3')">
+            <span class="pin-number">3</span>
+            <!-- <span class="pin-letters">D E F</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('4')">
+            <span class="pin-number">4</span>
+            <!-- <span class="pin-letters">G H I</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('5')">
+            <span class="pin-number">5</span>
+            <!-- <span class="pin-letters">J K L</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('6')">
+            <span class="pin-number">6</span>
+            <!-- <span class="pin-letters">M N O</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('7')">
+            <span class="pin-number">7</span>
+            <!-- <span class="pin-letters">P Q R S</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('8')">
+            <span class="pin-number">8</span>
+            <!-- <span class="pin-letters">T U V</span> -->
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('9')">
+            <span class="pin-number">9</span>
+            <!-- <span class="pin-letters">W X Y Z</span> -->
+          </button>
+
+          <button type="button" class="pin-text-btn" onclick="changeUsername()">
+            Đổi user
+          </button>
+
+          <button type="button" class="pin-key" onclick="pressPin('0')">
+            <span class="pin-number">0</span>
+          </button>
+
+          <button type="button" class="pin-text-btn" onclick="deletePin()">
+            Xóa
+          </button>
+        </div>
+
+        <button
+          type="button"
+          id="loginBtn"
+          class="pin-login-btn"
+          onclick="submitLogin()"
+          disabled
+        >
+          Login
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/component/loading.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>

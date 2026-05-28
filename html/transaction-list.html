@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Transaction List</title>
+
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap-icons-1.13.1/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <div class="container py-4">
+    <div class="card app-card shadow">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start gap-2 mb-3">
+          <div class="min-w-0">
+            <h4 class="mb-1">Transaction List</h4>
+            <div id="periodInfo" class="small text-muted"></div>
+          </div>
+
+          <button
+            type="button"
+            id="refreshBtn"
+            class="btn btn-outline-primary btn-sm d-none"
+            onclick="refreshOpenPeriodTransactions()"
+          >
+            Refresh
+          </button>
+        </div>
+
+        <div id="transactionList"></div>
+
+        <button
+          type="button"
+          class="btn btn-outline-secondary w-100 mt-3"
+          onclick="goBackPeriod()"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/component/loading.js"></script>
+  <script src="../js/component/header.js"></script>
+  <script src="../js/component/navbar.js"></script>
+  <script src="../js/transaction-list.js"></script>
+</body>
+</html>

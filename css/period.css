@@ -1,0 +1,123 @@
+.period-list {
+  height: 80vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.period-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.period-item.status-bg-open {
+  background: #eaf7ef;
+  border-color: #b7e4c7;
+}
+
+.period-item.status-bg-end {
+  background: #fff8e1;
+  border-color: #ffe08a;
+}
+
+.period-item.status-bg-lock {
+  background: #f1f3f5;
+  border-color: #ced4da;
+}
+
+.period-row-1,
+.period-row-2,
+.period-row-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.period-row-1 {
+  margin-bottom: 8px;
+}
+
+.period-row-2 {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.period-row-3 {
+  font-size: 13px;
+  color: #495057;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-open {
+  background: #198754;
+  color: white;
+}
+
+.status-end {
+  background: #ffc107;
+  color: #212529;
+}
+
+.status-lock {
+  background: #6c757d;
+  color: white;
+}
+
+.cal-prd-list {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.cal-prd-item {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+.cal-prd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.cal-prd-result {
+  font-weight: 700;
+  color: #198754;
+  white-space: nowrap;
+}
+
+.cal-prd-values {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 12px;
+  font-size: 13px;
+  color: #495057;
+}
+
+.cal-prd-item.cal-prd-warning {
+  background: #fff3cd;
+  border-color: #ffe69c;
+}
+
+.cal-prd-item.cal-prd-current-user {
+  border: 2px solid #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.cal-prd-item.cal-prd-current-user .cal-prd-user {
+  color: #0d6efd;
+}
