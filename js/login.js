@@ -11,12 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function goPasswordScreen() {
-  const username = document.getElementById("username").value.trim();
+  const usernameInput = document.getElementById("username");
+  const username = usernameInput.value.trim();
 
   if (!username) {
     alert("Please enter username.");
     return;
   }
+
+  usernameInput.blur();
 
   currentUsername = username;
   localStorage.setItem("savedUsername", currentUsername);
@@ -52,19 +55,25 @@ function pressPin(number) {
 
   pin += number;
   renderPinDots();
-  renderLoginButton();
+  // renderLoginButton();
+
+  if (pin.length === 4) {
+    setTimeout(() => {
+      submitLogin();
+    }, 150);
+  }
 }
 
 function deletePin() {
   pin = pin.slice(0, -1);
   renderPinDots();
-  renderLoginButton();
+  // renderLoginButton();
 }
 
 function clearPin() {
   pin = "";
   renderPinDots();
-  renderLoginButton();
+  // renderLoginButton();
 }
 
 function renderLoginButton() {
@@ -131,5 +140,10 @@ function showPasswordScreen() {
 
   pin = "";
   renderPinDots();
-  renderLoginButton();
+  // renderLoginButton();
+
+  
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+  });
 }
